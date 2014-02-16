@@ -28,7 +28,7 @@ $(function () {
 	marker_br.bindPopup('Blackrock')
 
 
-	L.tileLayer('/mouse_guard_tiles/{z}/{x}/{y}.png', {
+	L.tileLayer('/mouse_guard_tiles/{z}/{y}/{x}.png', {
 	          attribution: 'Jykke ref: http://www.cartographersguild.com/finished-maps/11075-mouse-guard-map-facelift.html',
 	          maxZoom: 4
 	      }).addTo(map)
