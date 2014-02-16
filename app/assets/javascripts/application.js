@@ -29,20 +29,30 @@ $(function () {
 	map.setMaxBounds(map.getBounds())
 
 
-	var lat = $("#edit_area_1 #area_lat").val()
-	var lon = $("#edit_area_1 #area_long").val()
-	var name = $("#edit_area_1 #area_name").val()
+	var lat1 = $("#edit_area_1 #area_lat").val()
+	var lon1 = $("#edit_area_1 #area_long").val()
+	var name1 = $("#edit_area_1 #area_name").val()
 
-	marker_lh = L.marker([lat, lon]).addTo(map)
-	//marker_lh.bindPopup(name)
+	marker_lh = L.marker([lat1, lon1]).addTo(map)
+	//marker_lh.bindPopup(name1)
 
 	marker_lh.on('click', function() {
-		$(".area_form").show()
-		$(".new_area_form").hide()
+		$("#edit_area_1, .area_form").show()
+		$(".new_area_form, #edit_area_3").hide()
 	})
 
-	marker_br = L.marker([-0.54931, -15.29297]).addTo(map)
-	marker_br.bindPopup('Blackrock')
+
+	var lat2 = $("#edit_area_3 #area_lat").val()
+	var lon2 = $("#edit_area_3 #area_long").val()
+	var name2 = $("#edit_area_3 #area_name").val()
+
+	marker_br = L.marker([lat2, lon2]).addTo(map)
+	//marker_lh.bindPopup(name2)
+
+	marker_br.on('click', function() {
+		$("#edit_area_3").show()
+		$(".new_area_form, #edit_area_1").hide()
+	})
 
 	function onMapClick(e) {
 	    alert("You clicked the map at " + e.latlng);
