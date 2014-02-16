@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require leaflet
 //= require_tree .
+
 $(function () {
 
 	var map = L.map('map')
@@ -28,8 +28,18 @@ $(function () {
 	map.setView([0, 0], 2)
 	map.setMaxBounds(map.getBounds())
 
-	marker_lh = L.marker([8.90678, -37.26562]).addTo(map)
-	marker_lh.bindPopup('Lockhaven')
+
+	var lat = $("#edit_area_1 #area_lat").val()
+	var lon = $("#edit_area_1 #area_long").val()
+	var name = $("#edit_area_1 #area_name").val()
+
+	marker_lh = L.marker([lat, lon]).addTo(map)
+	//marker_lh.bindPopup(name)
+
+	marker_lh.on('click', function() {
+		$(".area_form").show()
+		$(".new_area_form").hide()
+	})
 
 	marker_br = L.marker([-0.54931, -15.29297]).addTo(map)
 	marker_br.bindPopup('Blackrock')

@@ -2,7 +2,17 @@
 <div id="map"></div>
 
 <div id="info">
-<h1>Your place's info</h1>
-<p>This part will have info on what you selected!</p>
+<div class="new_area_form">
+ 	<%= render :partial => "areas/form", :locals => {area: Area.new} %>
+</div>
 
+ <% @areas.each do |area| %>
+	 <div class="area_form">
+	 	<%= render :partial => "areas/form", :locals => {area: area} %>
+	 </div>
+ <% end %>
+
+	
+</div>
+ <%= link_to "All area's", areas_path %>
 </div>

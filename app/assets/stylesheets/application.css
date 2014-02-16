@@ -41,3 +41,7 @@ h1 {
 	background-image: url(http://subtlepatterns.com/patterns/old_map.png);
 	background-color: #FFCF73;
 }
+
+.area_form {
+	display: none;
+}
