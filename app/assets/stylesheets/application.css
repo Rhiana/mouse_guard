@@ -15,7 +15,7 @@
 
 body {
 	font-family: 'Kaushan Script', cursive;
-	background-color: #FFA900;
+	background-color: #FFBE40;
 	color: #006561;
 }
 
@@ -38,5 +38,6 @@ h1 {
 #info {
 	width: 23%;
 	float: right;
+	background-image: url(http://subtlepatterns.com/patterns/old_map.png);
 	background-color: #FFCF73;
 }
