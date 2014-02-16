@@ -19,13 +19,6 @@ $(function () {
 
 	var map = L.map('map')
 
-	//marker_lh = L.marker([73.76964, -65.16016]).addTo(map)
-	//marker_lh.bindPopup('Lockhaven')
-
-	//marker_br = L.marker([71.62907, -47.10937]).addTo(map)
-	//marker_br.bindPopup('Blackrock')
-
-
 	L.tileLayer('/mouse_guard_tiles/{z}/{y}/{x}.png', {
 	          attribution: 'Jykke ref: http://www.cartographersguild.com/finished-maps/11075-mouse-guard-map-facelift.html',
 	          maxZoom: 4,
@@ -34,6 +27,12 @@ $(function () {
 
 	map.setView([0, 0], 2)
 	map.setMaxBounds(map.getBounds())
+
+	marker_lh = L.marker([8.90678, -37.26562]).addTo(map)
+	marker_lh.bindPopup('Lockhaven')
+
+	marker_br = L.marker([-0.54931, -15.29297]).addTo(map)
+	marker_br.bindPopup('Blackrock')
 
 	function onMapClick(e) {
 	    alert("You clicked the map at " + e.latlng);

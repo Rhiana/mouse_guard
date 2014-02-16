@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @area.name %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @area.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @area.long %>
+</p>
+
+<p>
+  <strong>Catagory:</strong>
+  <%= @area.catagory %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @area.description %>
+</p>
+
+<p>
+  <strong>Inhabitants:</strong>
+  <%= @area.inhabitants %>
+</p>
+
+<p>
+  <strong>Exploits:</strong>
+  <%= @area.exploits %>
+</p>
+
+<p>
+  <strong>Reputation:</strong>
+  <%= @area.reputation %>
+</p>
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>

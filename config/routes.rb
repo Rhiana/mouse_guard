@@ -1,4 +1,6 @@
 MouseGuard::Application.routes.draw do
+  resources :areas
+
   get "welcome/index"
 
   root 'welcome#index'
