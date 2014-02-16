@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project takes a map from Mouseguard.
+This will assist in role playing Mouseguard games
 
-Things you may want to cover:
+* Zoom in and out on the map
 
-* Ruby version
+* Markers on all towns
 
-* System dependencies
+* Information boxes on all towns with customisable content
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Reputation bars to follow the parties influence on towns throughout the game
