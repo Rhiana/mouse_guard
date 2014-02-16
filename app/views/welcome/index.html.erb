@@ -1,13 +1,8 @@
-<h1>Welcome to Mouse Guard!</h1>
-<%# image_tag "mouseguard_map.png" %>	
-	<%= map(:center => {
-    :latlng => [51.52238797921441, -0.08366235665359283],
-    :zoom => 1
-	  },
-	  :markers => [
-	     {
-	       :latlng => [51.52238797921441, -0.08366235665359283],
-	       :popup => "Hello!"
-	     }
-	  ]
-	) %>
+<h1 id = "mainh1">Welcome to Mouse Guard!</h1>
+<div id="map"></div>
+
+<div id="info">
+<h1>Your place's info</h1>
+<p>This part will have info on what you selected!</p>
+
+</div>

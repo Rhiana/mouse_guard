@@ -13,6 +13,30 @@
  *= require_tree .
  */
 
- #map {
- 	height: 500px;
+body {
+	font-family: 'Kaushan Script', cursive;
+	background-color: #FFA900;
+	color: #006561;
+}
+
+h1 {
+	text-align: center;
+}
+
+#map,
+#info {
+	border: 2px #006561 solid;
+	height: 500px;
+}
+
+#map {
+  	width: 75%;
+ 	float: left;
+
  }
+
+#info {
+	width: 23%;
+	float: right;
+	background-color: #FFCF73;
+}
