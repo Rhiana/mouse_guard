@@ -19,7 +19,9 @@ $(function () {
 
 	var map = L.map('map')
 
-	L.tileLayer('/mouse_guard_tiles/{z}/{y}/{x}.png', {
+  local_tiles = '/mouse_guard_tiles/{z}/{y}/{x}.png';
+  github_pages_tiles = 'http://rhiana.github.io/mouse_guard/public/mouse_guard_tiles/{z}/{y}/{x}.png';
+	L.tileLayer(github_pages_tiles, {
 	          attribution: 'Jykke ref: http://www.cartographersguild.com/finished-maps/11075-mouse-guard-map-facelift.html',
 	          maxZoom: 4,
 	          minZoom: 2
