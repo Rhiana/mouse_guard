@@ -1,18 +1,20 @@
-<h1 id = "mainh1">Welcome to Mouse Guard!</h1>
-<div id="map"></div>
+<div>
+	<h1 id = "mainh1">Welcome to Mouse Guard!</h1>
+	<div id="map"></div>
 
-<div id="info">
-<div class="new_area_form">
- 	<%= render :partial => "areas/form", :locals => {area: Area.new} %>
+	<div id="info">
+		<div class="new_area_form">
+		 	<%= render :partial => "areas/form", :locals => {area: Area.new} %>
+		</div>
+
+		 <% @areas.each do |area| %>
+			 <div class="area_form">
+			 	<%= render :partial => "areas/form", :locals => {area: area} %>
+			 </div>
+		 <% end %>
+		</div>
+	</div>
 </div>
-
- <% @areas.each do |area| %>
-	 <div class="area_form">
-	 	<%= render :partial => "areas/form", :locals => {area: area} %>
-	 </div>
- <% end %>
-
-	
-</div>
- <%= link_to "All area's", areas_path %>
+<div class="navigation">
+	<%= link_to "All area's", areas_path %>
 </div>

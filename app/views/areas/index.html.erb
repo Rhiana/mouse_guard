@@ -1,42 +1,44 @@
 <h1>Listing areas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Lat</th>
-      <th>Long</th>
-      <th>Catagory</th>
-      <th>Description</th>
-      <th>Inhabitants</th>
-      <th>Exploits</th>
-      <th>Reputation</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @areas.each do |area| %>
+<div id="areas_table">
+  <table>
+    <thead>
       <tr>
-        <td><%= area.name %></td>
-        <td><%= area.lat %></td>
-        <td><%= area.long %></td>
-        <td><%= area.catagory %></td>
-        <td><%= area.description %></td>
-        <td><%= area.inhabitants %></td>
-        <td><%= area.exploits %></td>
-        <td><%= area.reputation %></td>
-        <td><%= link_to 'Show', area %></td>
-        <td><%= link_to 'Edit', edit_area_path(area) %></td>
-        <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Lat</th>
+        <th>Long</th>
+        <th>Catagory</th>
+        <th>Description</th>
+        <th>Inhabitants</th>
+        <th>Exploits</th>
+        <th>Reputation</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @areas.each do |area| %>
+        <tr>
+          <td><%= area.name %></td>
+          <td><%= area.lat %></td>
+          <td><%= area.long %></td>
+          <td><%= area.catagory %></td>
+          <td><%= area.description %></td>
+          <td><%= area.inhabitants %></td>
+          <td><%= area.exploits %></td>
+          <td><%= area.reputation %></td>
+          <td><%= link_to 'Show', area %></td>
+          <td><%= link_to 'Edit', edit_area_path(area) %></td>
+          <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
-<%= link_to 'New Area', new_area_path %>
- <%= link_to "Map View", root_path %>
+<div class="navigation">
+  <%= link_to 'New Area', new_area_path %> |
+  <%= link_to "Map View", root_path %>
+</div>

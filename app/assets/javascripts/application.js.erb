@@ -1,0 +1,81 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery
+//= require jquery_ujs
+//= require leaflet
+//= require_tree .
+
+$(function () {
+	var map 		= L.map('map')
+	var orangeIcon 	= L.icon({
+	    iconUrl: 	'<%= asset_path "leaf-orange.png" %>',
+	    shadowUrl: 	'<%= asset_path "leaf-shadow.png" %>',
+	    iconSize:     [19, 47], // size of the icon
+	    shadowSize:   [25, 32], // size of the shadow
+	    iconAnchor:   [11, 47], // point of the icon which will correspond to marker's location
+	    shadowAnchor: [2, 31],  // the same for the shadow
+	    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+
+	var redIcon 	= L.icon({
+	    iconUrl: 	'<%= asset_path "leaf-red.png" %>',
+	    shadowUrl: 	'<%= asset_path "leaf-shadow.png" %>',
+	    iconSize:     [19, 47], // size of the icon
+	    shadowSize:   [25, 32], // size of the shadow
+	    iconAnchor:   [11, 47], // point of the icon which will correspond to marker's location
+	    shadowAnchor: [2, 31],  // the same for the shadow
+	    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+
+	local_tiles = '/mouse_guard_tiles/{z}/{y}/{x}.png';
+ 	github_pages_tiles = 'http://rhiana.github.io/mouse_guard/public/mouse_guard_tiles/{z}/{y}/{x}.png';
+	L.tileLayer(github_pages_tiles, {
+      attribution: 'Jykke ref: http://www.cartographersguild.com/finished-maps/11075-mouse-guard-map-facelift.html',
+      maxZoom: 4,
+      minZoom: 2
+	}).addTo(map)
+	map.fitWorld()
+	//map.setView([0, 0], 2)
+	map.setMaxBounds(map.getBounds())
+	map.on("contextmenu", onMapRightClick)
+	showAllMarkers()
+
+	function onMapRightClick(e) {
+	    L.marker([e.latlng.lat, e.latlng.lng], {icon: redIcon} ).addTo(map)
+	    $(".new_area_form").show()
+	    $(".edit_area").hide()
+	    $("input#area_lat").val(e.latlng.lat.toFixed(2))
+	    $("input#area_long").val(e.latlng.lng.toFixed(2))
+	}
+
+	function onMarkerLeftClick(form) {
+		return function(){
+			$(".edit_area").hide()
+			$(".new_area_form").hide()
+			$(form).show()
+		}
+	}
+
+	function showAllMarkers() {
+		$(".edit_area").hide()
+		$(".edit_area").each(function(index, form){
+			var lat 	= $("input#area_lat", form).val()
+			var lng 	= $("input#area_long", form).val()
+			var name 	= $("input#area_name", form).val()
+			var marker 	= L.marker([lat, lng], {icon: orangeIcon})
+			marker.addTo(map).bindPopup(name)
+			marker.on("click", onMarkerLeftClick(form))
+		});
+	}
+});
+

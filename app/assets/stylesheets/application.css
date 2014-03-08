@@ -17,31 +17,66 @@ body {
 	font-family: 'Kaushan Script', cursive;
 	background-color: #FFBE40;
 	color: #006561;
+	font-size: 1.333em;
 }
 
 h1 {
 	text-align: center;
 }
 
-#map,
+input,
+textarea {
+	font-size: 1.125em;
+	width: 80%;
+}
+
 #info {
 	border: 2px #006561 solid;
-	height: 500px;
+	height: 550px;
+	font-size: .85em;
 }
 
 #map {
-  	width: 75%;
+	border: 2px #006561 solid;
+  	width: 1024px;
+  	height: 500px;
  	float: left;
-
  }
 
 #info {
 	width: 23%;
 	float: right;
+}
+
+#areas_table,
+#areas_show,
+#area_edit,
+#info form,
+#area_new {
+	width: 75%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#area_edit form,
+#area_new form {
+	margin-left:37.5%;
+}
+
+#info,
+#areas_table,
+#areas_show,
+#area_edit,
+#area_new {
 	background-image: url(http://subtlepatterns.com/patterns/old_map.png);
 	background-color: #FFCF73;
 }
 
-.area_form {
-	display: none;
+.navigation {
+	float: left;
+	width: 100%;
+}
+
+table,th, td {
+	border: 2px #006561 solid;
 }
