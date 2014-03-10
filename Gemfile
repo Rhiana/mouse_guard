@@ -36,6 +36,8 @@ end
 
 gem "leaflet-rails", "~> 0.7.2"
 
+gem 'carrierwave-postgresql'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

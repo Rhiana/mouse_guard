@@ -30,9 +30,13 @@ textarea {
 	width: 80%;
 }
 
+textarea {
+	height: 4em;
+}
+
 #info {
 	border: 2px #006561 solid;
-	height: 550px;
+	height: 600px;
 	font-size: .85em;
 }
 
@@ -79,4 +83,13 @@ textarea {
 
 table,th, td {
 	border: 2px #006561 solid;
+}
+
+#area_lat,
+#area_long {
+	display: none;
+}
+
+.actions {
+	margin-top: 1em;
 }

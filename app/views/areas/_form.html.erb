@@ -16,11 +16,9 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :latitude %><br>
     <%= f.text_field :lat %>
   </div>
   <div class="field">
-    <%= f.label :longitude %><br>
     <%= f.text_field :long %>
   </div>
   <div class="field">
@@ -45,5 +43,8 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+  <div class="actions">
+    <%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 <% end %>

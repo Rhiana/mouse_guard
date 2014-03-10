@@ -12,8 +12,6 @@
         <th>Exploits</th>
         <th>Reputation</th>
         <th></th>
-        <th></th>
-        <th></th>
       </tr>
     </thead>
 
@@ -28,8 +26,6 @@
           <td><%= area.inhabitants %></td>
           <td><%= area.exploits %></td>
           <td><%= area.reputation %></td>
-          <td><%= link_to 'Show', area %></td>
-          <td><%= link_to 'Edit', edit_area_path(area) %></td>
           <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
@@ -39,6 +35,5 @@
 <br>
 
 <div class="navigation">
-  <%= link_to 'New Area', new_area_path %> |
   <%= link_to "Map View", root_path %>
 </div>
