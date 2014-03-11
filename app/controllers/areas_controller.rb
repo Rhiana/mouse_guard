@@ -31,7 +31,7 @@ class AreasController < ApplicationController
         format.html { redirect_to root_path, notice: 'Area was successfully created.' }
         format.json { render action: 'show', status: :created, location: @area }
       else
-        format.html { render action: 'new' }
+        format.html { raise @area.errors.inspect }
         format.json { render json: @area.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class AreasController < ApplicationController
         format.html { redirect_to root_path, notice: 'Area was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { raise @area.errors.inspect }
         format.json { render json: @area.errors, status: :unprocessable_entity }
       end
     end
@@ -62,6 +62,11 @@ class AreasController < ApplicationController
   end
 
   private
+
+    def connection
+      @con ||= ActiveRecord::Base.connection.raw_connection
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_area
       @area = Area.find(params[:id])
@@ -69,6 +74,6 @@ class AreasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def area_params
-      params.require(:area).permit(:name, :lat, :long, :catagory, :description, :inhabitants, :exploits, :reputation)
+      params.require(:area).permit(:name, :lat, :long, :catagory, :description, :inhabitants, :exploits, :reputation, :path_view, :path_view_cache)
     end
 end
