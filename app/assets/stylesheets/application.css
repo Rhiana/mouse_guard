@@ -40,7 +40,8 @@ textarea {
 	font-size: .85em;
 }
 
-#map {
+#map,
+#path_view {
 	border: 2px #006561 solid;
   	width: 1024px;
   	height: 500px;
