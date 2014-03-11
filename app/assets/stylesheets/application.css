@@ -41,11 +41,12 @@ textarea {
 }
 
 #map,
-#path_view {
+.path_view {
 	border: 2px #006561 solid;
   	width: 1024px;
   	height: 500px;
  	float: left;
+ 	margin-bottom: 10px;
  }
 
 #info {

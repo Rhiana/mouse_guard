@@ -40,11 +40,11 @@
   <div class="field">
     <%= f.label :reputation %><br>
     <%= f.number_field :reputation %>
+  </div>
   <div class="field">
-    <label>Upload Path View</label>
+    <%= f.label :path_view %>
     <%= f.file_field :path_view %>
     <%= f.hidden_field :path_view_cache %>
-  </div>
   </div>
   <div class="actions">
     <%= f.submit %>
