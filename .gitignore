@@ -15,5 +15,6 @@ config/secrets
 /log/*.log
 /tmp
 
+public/uploads/
 .DS_Store
 
