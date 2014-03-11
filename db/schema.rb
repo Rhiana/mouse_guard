@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140311075433) do
     t.integer  "reputation"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "path_view"
+    t.string   "path_view"
   end
 
 end

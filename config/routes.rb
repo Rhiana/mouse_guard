@@ -5,8 +5,6 @@ MouseGuard::Application.routes.draw do
 
   root 'welcome#index'
 
-  mount PostgresqlLoStreamer::Engine => "/area_path_view"
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -15,6 +13,4 @@ MouseGuard::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
-
 end
