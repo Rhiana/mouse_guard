@@ -38,6 +38,8 @@ gem "leaflet-rails", "~> 0.7.2"
 
 gem 'carrierwave-postgresql'
 
+gem 'postgresql_lo_streamer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

@@ -1,7 +1,6 @@
 <div>
 	<h1 id = "mainh1">Welcome to Mouse Guard!</h1>
 	<div id="map"></div>
-
 	<div id="info">
 		<div class="new_area_form">
 		 	<%= render :partial => "areas/form", :locals => {area: Area.new} %>
@@ -14,7 +13,11 @@
 		 <% end %>
 		</div>
 	</div>
-</div>
-<div class="navigation">
-	<%= link_to "All area's", areas_path %>
+
+	<% @areas.each do |area| %>
+		<div id="path_view">
+	    <h3>My Path</h3>
+	    <%= image_tag(area.path_view_url) if area.path_view? %>
+  		</div>
+	<% end %>
 </div>
