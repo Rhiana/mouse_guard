@@ -10,3 +10,15 @@ This will assist in role playing Mouseguard games
 * Information boxes on all towns with customisable content
 
 * Reputation bars to follow the parties influence on towns throughout the game
+
+To Do
+
+* Adding a path layer to show party progress
+
+* Adding ability to upload pictures for areas or events
+
+* Adding season tracker
+
+* Adding gm and player profiles
+
+* Adding a create game page to save your specific parties progress

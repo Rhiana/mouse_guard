@@ -7,17 +7,17 @@
 		</div>
 
 		 <% @areas.each do |area| %>
-			 <div class="area_form">
-			 	<%= render :partial => "areas/form", :locals => {area: area} %>
-			 </div>
+		 <div class="area_form">
+		 	<%= render :partial => "areas/form", :locals => {area: area} %>
+		 </div>
 		 <% end %>
-		</div>
 	</div>
-
+<!--
 	<% @areas.each do |area| %>
 		<div class="path_view">
 	    <h3>My Path</h3>
 	    <%= image_tag(area.path_view_url) if area.path_view? %>
   		</div>
 	<% end %>
+-->
 </div>

@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<h2>Information</h2>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -41,18 +41,18 @@
     <%= f.label :reputation %><br>
     <%= f.number_field :reputation %>
   </div>
-  <div class="field">
+  <!--<div class="field">
     <%= f.label :path_view %>
     <%= f.file_field :path_view %>
     <%= f.hidden_field :path_view_cache %>
-  </div>
+  </div>-->
   <div class="actions">
     <%= f.submit %>
   </div>
-  <div class="actions">
-    <%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-  <div class="navigation">
-    <%= link_to "All area's", areas_path %>
-  </div>
 <% end %>
+<div class="actions">
+  <%= button_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<div class="navigation">
+  <%= button_to "Show all area's", areas_path, method: :get %>
+</div>

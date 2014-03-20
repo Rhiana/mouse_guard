@@ -20,8 +20,10 @@ body {
 	font-size: 1.333em;
 }
 
-h1 {
+h1,
+h2 {
 	text-align: center;
+	border-bottom: 3.5px #006561 solid;
 }
 
 input,
@@ -38,6 +40,9 @@ textarea {
 	border: 2px #006561 solid;
 	height: 700px;
 	font-size: .85em;
+	width: 23%;
+	float: right;
+	min-width: 320px;
 }
 
 #map,
@@ -48,11 +53,6 @@ textarea {
  	float: left;
  	margin-bottom: 10px;
  }
-
-#info {
-	width: 23%;
-	float: right;
-}
 
 #areas_table,
 #areas_show,
