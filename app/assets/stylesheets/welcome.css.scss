@@ -1,3 +1,144 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	font-family: 'Kaushan Script', cursive;
+	background-color: #FFBE40;
+	color: #006561;
+	font-size: 1.333em;
+}
+
+h1,
+h2 {
+	text-align: center;
+	border-bottom: 3.5px #006561 solid;
+}
+
+.container {
+	border: 3.5px #006561 solid;
+}
+
+input,
+textarea {
+	font-size: 1.125em;
+	width: 100%;
+	border-radius: 5px;
+}
+
+textarea {
+	height: 4em;
+}
+
+input[type="submit"] {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fed897;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fed897;
+	box-shadow:inset 0px 1px 0px 0px #fed897;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f6b33d), color-stop(1, #d29105) );
+	background:-moz-linear-gradient( center top, #f6b33d 5%, #d29105 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6b33d', endColorstr='#d29105');
+	background-color:#f6b33d;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #eda933;
+	display:inline-block;
+	color:inherit;
+	font-family:inherit;
+	font-size:15px;
+	font-weight:normal;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #cd8a15;
+}
+
+input[type="submit"]:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d29105), color-stop(1, #f6b33d) );
+	background:-moz-linear-gradient( center top, #d29105 5%, #f6b33d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29105', endColorstr='#f6b33d');
+	background-color:#d29105;
+}
+
+input[type="submit"]:active {
+	position:relative;
+	top:1px;
+}/* This button was generated using CSSButtonGenerator.com */
+
+#info,
+#areas_table table {
+	border: 2px #006561 solid;
+	height: 100%;
+	min-width: 320px;
+	background-color: #FFCF73;
+	margin: auto;
+}
+
+#map {
+	border: 2px #006561 solid;
+  	width: 1024px;
+  	height: 500px;
+ 	margin: auto;
+ }
+
+#areas_table,
+#areas_show,
+#area_edit,
+#info form,
+#area_new {
+	width: 75%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#area_edit form,
+#area_new form {
+	margin-left:37.5%;
+}
+
+.container,
+
+#areas_show,
+#area_edit,
+#area_new {
+	background-image: url(http://subtlepatterns.com/patterns/old_map.png);
+}
+
+.actions input[type="submit"] {
+	width: 100%;
+}
+
+table,th, td {
+	border: 2px #006561 solid;
+}
+
+#area_lat,
+#area_long {
+	display: none;
+}
+
+.actions {
+	margin-top: 1em;
+}
+
+img {
+	width: 100%;
+}
+
+.row {
+	margin: 2% 0;
+}
+

@@ -71,13 +71,11 @@ $(function () {
 			$(".area_form").hide()
 			$(".new_area_form").hide()
 			$(form).show()
-			$(".path_view").show()
 		}
 	}
 
 	function showAllMarkers() {
 		$(".area_form").hide()
-		$(".path_view").hide()
 		$(".area_form").each(function(index, form){
 			var lat 	= $("input#area_lat", form).val()
 			var lng 	= $("input#area_long", form).val()
