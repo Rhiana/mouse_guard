@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.2.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -54,4 +54,3 @@ gem 'puma'
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor', group: :production
-
