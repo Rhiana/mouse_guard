@@ -1,18 +1,18 @@
 <div>
-	<h1 id = "mainh1">Welcome to Mouse Guard!</h1>
+	<h1 id ="mainh1">Welcome to Mouse Guard!</h1>
 	<div id="map"></div>
 	<div class="container-fluid">
 		<div class="row">
 			<div id="info" class="col-xs-12">
 				<div class="new_area_form">
-				 	<%= render :partial => "areas/form", :locals => {area: Area.new} %>
+				 	<%= render partial: "areas/form", locals: {area: Area.new} %>
 				</div>
 
-				 <% @areas.each do |area| %>
-				 <div class="area_form">
-				 	<%= render :partial => "areas/form", :locals => {area: area} %>
-				 </div>
-				 <% end %>
+				<% @areas.each do |area| %>
+				 	<div class="area_form">
+				 		<%= render partial: "areas/form", locals: {area: area} %>
+				 	</div>
+				<% end %>
 			</div>
 		</div>
 	</div>
