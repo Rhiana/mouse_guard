@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.5.1"
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -35,10 +35,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem "leaflet-rails"
+gem 'leaflet-rails'
 
 gem 'carrierwave'
-gem "fog"
+gem 'fog-aws'
 
 gem 'puma'
 
