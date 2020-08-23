@@ -55,6 +55,15 @@ header {
 
 
 #areas_table {
-	width: 75%;
-	margin: 1em auto;
+	max-width: 1024px;
+	margin: 0 auto;
+	text-align: center;
+	h2 {
+		display: inline-block;
+		margin-bottom: 0.75em;
+	}
+	table {
+		width: 100%;
+		margin: auto;
+	}
 }

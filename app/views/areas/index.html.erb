@@ -1,37 +1,41 @@
-<h2>All areas</h2> 
+<div>
+  <div id="map"></div>
 
-<div id="areas_table">
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Lat</th>
-        <th>Long</th>
-        <th>Catagory</th>
-        <th>Description</th>
-        <th>Inhabitants</th>
-        <th>Exploits</th>
-        <th>Reputation</th>
-        <th></th>
-      </tr>
-    </thead>
+  <div id="info">
+    <div id="areas_table">
+      <h2>All areas</h2> 
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Lat</th>
+            <th>Long</th>
+            <th>Catagory</th>
+            <th>Description</th>
+            <th>Inhabitants</th>
+            <th>Exploits</th>
+            <th>Reputation</th>
+            <th></th>
+          </tr>
+        </thead>
 
-    <tbody>
-      <% @areas.each do |area| %>
-        <tr>
-          <td><%= area.name %></td>
-          <td><%= area.lat %></td>
-          <td><%= area.long %></td>
-          <td><%= area.catagory %></td>
-          <td><%= area.description %></td>
-          <td><%= area.inhabitants %></td>
-          <td><%= area.exploits %></td>
-          <td><%= area.reputation %></td>
-          <td><%= button_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+        <tbody>
+          <% @areas.each do |area| %>
+            <tr>
+              <td><%= area.name %></td>
+              <td><%= area.lat %></td>
+              <td><%= area.long %></td>
+              <td><%= area.catagory %></td>
+              <td><%= area.description %></td>
+              <td><%= area.inhabitants %></td>
+              <td><%= area.exploits %></td>
+              <td><%= area.reputation %></td>
+              <td><%= button_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-<br>
 
