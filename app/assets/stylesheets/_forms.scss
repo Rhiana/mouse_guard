@@ -1,0 +1,22 @@
+input,
+textarea {
+	font-size: 1.125em;
+	width: 100%;
+	border-radius: 5px;
+}
+
+textarea {
+	height: 4em;
+}
+
+#area_lat,
+#area_long {
+	display: none;
+}
+
+.actions {
+	margin-top: 1em;
+	input[type="submit"] {
+		width: 100%;
+	}
+}

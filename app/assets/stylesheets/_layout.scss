@@ -1,0 +1,50 @@
+
+.container {
+	border: 3.5px #006561 solid;
+}
+
+
+#info {
+	border: 2px #006561 solid;
+	height: 100%;
+	min-width: 320px;
+	background-color: #FFCF73;
+	margin: auto;
+}
+
+#map {
+	border: 2px #006561 solid;
+  width: 1024px;
+  height: 500px;
+ 	margin: auto;
+}
+
+#areas_table,
+#areas_show,
+#area_edit,
+#info form,
+#area_new {
+	width: 75%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#area_edit form,
+#area_new form {
+	margin-left:37.5%;
+}
+
+.container,
+#areas_show,
+#area_edit,
+#area_new {
+	background-image: url(http://subtlepatterns.com/patterns/old_map.png);
+}
+
+img {
+	width: 100%;
+}
+
+.row {
+	margin: 2% 0;
+}
