@@ -16,6 +16,7 @@ gem 'uglifier'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'coffee-script'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
