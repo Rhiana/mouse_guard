@@ -1,13 +1,13 @@
 table,
 th,
 td {
-	border: 2px #006561 solid;
+	border: 2px $dark-cyan solid;
 }
 
 #areas_table table {
-	border: 2px #006561 solid;
+	border: 2px $dark-cyan solid;
 	height: 100%;
 	min-width: 320px;
-	background-color: #FFCF73;
+	background-color: $very-light-orange;
 	margin: auto;
 }

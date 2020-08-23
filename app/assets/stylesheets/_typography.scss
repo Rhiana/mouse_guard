@@ -1,12 +1,14 @@
 body {
 	font-family: 'Kaushan Script', cursive;
-	background-color: #FFBE40;
-	color: #006561;
+	background-color: $light-orange;
+	color: $dark-cyan;
 	font-size: 1.333em;
+	line-height: 1.3;
 }
 
 h1,
 h2 {
 	text-align: center;
-	border-bottom: 3.5px #006561 solid;
+	border-bottom: 3.5px $dark-cyan solid;
+	line-height: 1.1;
 }
