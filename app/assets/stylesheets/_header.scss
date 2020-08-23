@@ -1,0 +1,21 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 3.5px $dark-cyan solid;
+	background-image: url(old_map.png);
+	padding: 15px 30px;
+	h1 {
+		margin: 0;
+	}
+	a {
+		display: inline-block;
+		margin: 0 10px;
+		color: $dark-cyan;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
