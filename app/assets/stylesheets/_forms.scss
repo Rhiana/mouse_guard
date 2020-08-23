@@ -1,12 +1,21 @@
 input,
 textarea {
+	min-height: 1.25em;
 	font-size: 1.125em;
 	width: 100%;
 	border-radius: 5px;
 }
 
+label {
+	display: inline-block;
+	font-size: 1.125em;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 5px 0;
+}
+
 textarea {
-	height: 4em;
+	height: 5em;
 }
 
 #area_lat,
@@ -15,8 +24,31 @@ textarea {
 }
 
 .actions {
+	width: 100%;
 	margin-top: 1em;
 	input[type="submit"] {
+		width: 45%;
+		margin-right: 1em;
+	}
+}
+
+form {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@include mobile {
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+	}
+	h2 {
 		width: 100%;
+		margin-bottom: 0.75em;
+	}
+	fieldset {
+		width: 48%;
+		@include mobile {
+			width: 100%;
+		}
 	}
 }
