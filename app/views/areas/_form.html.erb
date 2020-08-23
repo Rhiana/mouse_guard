@@ -1,65 +1,69 @@
-<div class="col-xs-4">
-<%= form_for(area) do |f| %>
-  <% if area.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(area.errors.count, "error") %> prohibited this area from being saved:</h2>
+<div class="info_box">
+  <%= form_for(area) do |f| %>
+    <% if area.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(area.errors.count, "error") %> prohibited this area from being saved:</h2>
 
-      <ul>
-      <% area.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% area.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h2>Information</h2>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.text_field :lat %>
+    </div>
+    <div class="field">
+      <%= f.text_field :long %>
+    </div>
+    <div class="field">
+      <%= f.label :catagory %><br>
+      <%= f.text_field :catagory %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :inhabitants %><br>
+      <%= f.text_area :inhabitants %>
+    </div>
+    <div class="field">
+      <%= f.label :exploits %><br>
+      <%= f.text_area :exploits %>
+    </div>
+    <div class="field">
+      <%= f.label :reputation %><br>
+      <%= f.number_field :reputation %>
+    </div>
+    <div class="field">
+      <%= f.label :path_view %>
+      <%= f.file_field :path_view %>
+      <%= f.hidden_field :path_view_cache %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-<h2>Information</h2>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.text_field :lat %>
-  </div>
-  <div class="field">
-    <%= f.text_field :long %>
-  </div>
-  <div class="field">
-    <%= f.label :catagory %><br>
-    <%= f.text_field :catagory %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :inhabitants %><br>
-    <%= f.text_area :inhabitants %>
-  </div>
-  <div class="field">
-    <%= f.label :exploits %><br>
-    <%= f.text_area :exploits %>
-  </div>
-  <div class="field">
-    <%= f.label :reputation %><br>
-    <%= f.number_field :reputation %>
-  </div>
-  <div class="field">
-    <%= f.label :path_view %>
-    <%= f.file_field :path_view %>
-    <%= f.hidden_field :path_view_cache %>
+  <div class="actions">
+    <%= button_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= button_to "Show all area's", areas_path, method: :get %>
   </div>
-<% end %>
-<div class="actions">
-  <%= button_to 'Delete', area, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
-<div class="actions">
-  <%= button_to "Show all area's", areas_path, method: :get %>
-</div>
 </div>
 
-<div class="col-xs-8">
-<h2>My Path</h2>
-<%= image_tag(area.path_view_url) if area.path_view? %>
-</div>
+<% if area.path_view? %>
+  <div class="image_box">
+    <h2>Image</h2>
+    <%= image_tag(area.path_view_url) %>
+  </div>
+<% end %>

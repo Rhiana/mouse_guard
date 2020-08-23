@@ -1,15 +1,9 @@
-
 .container {
 	border: 3.5px $dark-cyan solid;
-}
-
-
-#info {
-	border: 2px $dark-cyan solid;
-	height: 100%;
-	min-width: 320px;
-	background-color: $very-light-orange;
-	margin: auto;
+	background-image: url(old_map.png);
+	max-width: 1170px;
+	margin: 1em auto;
+	padding: 15px;
 }
 
 #map {
@@ -19,32 +13,35 @@
  	margin: auto;
 }
 
-#areas_table,
-#areas_show,
-#area_edit,
-#info form,
-#area_new {
+#info {
+	border: 2px $dark-cyan solid;
+	height: 100%;
+	min-width: 320px;
+	background-color: $very-light-orange;
+	margin: auto;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+
+.new_area_form,
+.area_form {
+	display: flex;
+	justify-content: center;
+	.info_box {
+		width: 33%;
+	}
+	.image_box {
+		width: 60%;
+		margin-left: 2%;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+
+#areas_table {
 	width: 75%;
-	margin-left:auto;
-	margin-right:auto;
+	margin: 1em auto;
 }
 
-#area_edit form,
-#area_new form {
-	margin-left:37.5%;
-}
-
-.container,
-#areas_show,
-#area_edit,
-#area_new {
-	background-image: url(old_map.png);
-}
-
-img {
-	width: 100%;
-}
-
-.row {
-	margin: 2% 0;
-}
