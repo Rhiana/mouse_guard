@@ -7,7 +7,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 3.5px $dark-cyan solid;
-	background-image: url(old_map.png);
+	background-image: image_url('old_map.png');
 	padding: 15px 30px;
 	z-index: 1000;
 	h1 {
