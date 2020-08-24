@@ -12,6 +12,9 @@ header {
   max-width: 1024px;
   height: 500px;
  	margin: auto;
+ 	@include mobile {
+ 		max-height: 60vh;
+ 	}
 }
 
 #info {
@@ -20,6 +23,9 @@ header {
 	height: 100%;
 	background-color: $very-light-orange;
 	padding: 20px;
+	@include mobile {
+		padding: 10px;
+	}
 }
 
 .new_area_form,

@@ -10,10 +10,21 @@ header {
 	background-image: image_url('old_map.png');
 	padding: 15px 30px;
 	z-index: 1000;
+	@include mobile {
+		padding: 10px 15px;
+	}
 	h1 {
 		margin: 0;
 		font-weight: bold;
 		font-size: 1.5rem;
+		@include mobile {
+			font-size: 1.1em;
+		}
+		span {
+			@include mobile {
+				display: none;
+			}
+		}
 	}
 	a {
 		display: inline-block;
@@ -23,6 +34,9 @@ header {
 		&:hover,
 		&:focus {
 			text-decoration: underline;
+		}
+		@include mobile {
+			margin: 0 5px;
 		}
 	}
 }
