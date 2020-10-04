@@ -4,7 +4,7 @@ class AreasController < ApplicationController
   # GET /areas
   # GET /areas.json
   def index
-    @areas = Area.all
+    @areas = Area.all.sort { |a, b| a.name.downcase <=> b.name.downcase }
   end
 
   # GET /areas/1
@@ -63,17 +63,17 @@ class AreasController < ApplicationController
 
   private
 
-    def connection
-      @con ||= ActiveRecord::Base.connection.raw_connection
-    end
+  def connection
+    @con ||= ActiveRecord::Base.connection.raw_connection
+  end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_area
-      @area = Area.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_area
+    @area = Area.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def area_params
-      params.require(:area).permit(:name, :lat, :long, :catagory, :description, :inhabitants, :exploits, :reputation, :path_view, :path_view_cache)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def area_params
+    params.require(:area).permit(:name, :lat, :long, :catagory, :description, :inhabitants, :exploits, :reputation, :path_view, :path_view_cache)
+  end
 end
